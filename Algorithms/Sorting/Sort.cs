@@ -20,14 +20,26 @@
                 }
             }
         }
+
         /// <summary>
         /// Sorts an one-dimensional array using selection sort.
         /// </summary>
         /// <param name="array">The one-dimensional array to sort.</param>
-        /// <exception cref="NotSupportedException"></exception>
         public static void SelectionSort(T[] array)
         {
-            throw new NotSupportedException();
+            var n = array.Length;
+            for(var i = n - 1; i > 0; i--)
+            {
+                var maxIndex = 0;
+                for (var j = 1; j <= i; j++)
+                {
+                    if (array[maxIndex].CompareTo(array[j]) < 0)
+                    {
+                        maxIndex = j;
+                    }
+                }
+                (array[maxIndex], array[i]) = (array[i], array[maxIndex]);       
+            }
         }
     }
 }

@@ -40,9 +40,13 @@ namespace AlgorithmsTests
         {
             // Bubble Sort
             SortTest_IntArray(0, 100, Sort<int>.BubbleSort);
+            SortTest_IntArray(0, 50, Sort<int>.BubbleSort);
             SortTest_CharArray(Sort<char>.BubbleSort);
 
             // Selection Sort.
+            SortTest_IntArray(0, 100, Sort<int>.SelectionSort);
+            SortTest_IntArray(0, 50, Sort<int>.SelectionSort);
+            SortTest_CharArray(Sort<char>.SelectionSort);
         }
     }
 }

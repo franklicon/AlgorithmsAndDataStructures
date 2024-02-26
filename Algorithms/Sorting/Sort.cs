@@ -41,5 +41,24 @@
                 (array[maxIndex], array[i]) = (array[i], array[maxIndex]);       
             }
         }
+
+        /// <summary>
+        /// Sorts an one-dimensional array using insertion sort.
+        /// </summary>
+        /// <param name="array">The one-dimensional array to sort.</param>
+        public static void InsertionSort(T[] array)
+        {
+            var n = array.Length;
+            for(var i = 1; i < n; i++)
+            {
+                var currentElement = array[i];
+                int j;
+                for (j = i; j > 0 && (array[j - 1].CompareTo(currentElement) > 0); j--)
+                {
+                    array[j] = array[j - 1];
+                }
+                array[j] = currentElement;
+            }
+        }
     }
 }

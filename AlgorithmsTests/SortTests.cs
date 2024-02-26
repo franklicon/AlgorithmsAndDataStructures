@@ -47,6 +47,11 @@ namespace AlgorithmsTests
             SortTest_IntArray(0, 100, Sort<int>.SelectionSort);
             SortTest_IntArray(0, 50, Sort<int>.SelectionSort);
             SortTest_CharArray(Sort<char>.SelectionSort);
+
+            // Insertion Sort.
+            SortTest_IntArray(0, 100, Sort<int>.InsertionSort);
+            SortTest_IntArray(0, 50, Sort<int>.InsertionSort);
+            SortTest_CharArray(Sort<char>.InsertionSort);
         }
     }
 }

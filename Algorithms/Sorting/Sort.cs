@@ -85,5 +85,67 @@
                 gap /= 3;
             }
         }
+
+        /// <summary>
+        /// Sorts an one-dimensional array using merge sort.
+        /// </summary>
+        /// <param name="array">The one-dimensional array to sort.</param>
+        public static void MergeSort(T[] array)
+        {
+            var n = array.Length;
+            MSort(array, 0, n - 1);
+        }
+
+        private static void MSort(T[] array, int left, int right)
+        {
+            if (left < right)
+            {
+                var mid = (left + right) / 2;
+                MSort(array, left, mid);
+                MSort(array, mid + 1, right);
+                Merge(array, left, mid, right);
+            }    
+        }
+
+        private static void Merge(T[] array, int left, int mid, int right)
+        {
+            var k = left;
+            var i = left;
+            var j = mid + 1;
+            var auxArray = new T[array.Length];
+            while (i <= mid && j <= right)
+            {
+                if (array[i].CompareTo(array[j]) < 0)
+                {
+                    auxArray[k] = array[i];
+                    i++;
+                }
+                else
+                {
+                    auxArray[k] = array[j];
+                    j++;
+                }
+                k++;
+            }
+
+            while(i <= mid)
+            {
+                auxArray[k] = array[i];
+                i++;
+                k++;
+            }
+
+            while(j <= right)
+            {
+                auxArray[k] = array[j];
+                j++;
+                k++;
+            }
+
+            for(var m = left; m <= right; m++)
+            {
+                array[m] = auxArray[m];
+            }
+        }
     }
 }

@@ -57,6 +57,11 @@ namespace AlgorithmsTests
             SortTest_IntArray(0, 100, Sort<int>.ShellSort);
             SortTest_IntArray(0, 7, Sort<int>.ShellSort);
             SortTest_CharArray(Sort<char>.ShellSort);
+
+            // Merge Sort.
+            SortTest_IntArray(0, 100, Sort<int>.MergeSort);
+            SortTest_IntArray(0, 7, Sort<int>.MergeSort);
+            SortTest_CharArray(Sort<char>.MergeSort);
         }
     }
 }

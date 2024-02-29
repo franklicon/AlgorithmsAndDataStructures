@@ -60,5 +60,30 @@
                 array[j] = currentElement;
             }
         }
+
+        /// <summary>
+        /// Sorts an one-dimensional array using shell sort.
+        /// </summary>
+        /// <param name="array">The one-dimensional array to sort.</param>
+        public static void ShellSort(T[] array)
+        {
+            var n = array.Length;
+            var gap = 1;
+            while(gap < n/3)
+            {
+                gap = 3 * gap + 1;
+            }
+            while(gap > 0)
+            {
+                for (var i = gap; i < n; i++)
+                {
+                    for(var j = i; j >= gap && array[j].CompareTo(array[j - gap]) < 0; j -= gap)
+                    {
+                        (array[j], array[j - gap]) = (array[j - gap], array[j]);
+                    }
+                }
+                gap /= 3;
+            }
+        }
     }
 }

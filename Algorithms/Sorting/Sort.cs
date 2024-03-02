@@ -1,4 +1,6 @@
-﻿namespace Algorithms.Sorting
+﻿using System.Collections.Concurrent;
+
+namespace Algorithms.Sorting
 {
     public static class Sort<T> where T : IComparable
     {
@@ -145,6 +147,54 @@
             for(var m = left; m <= right; m++)
             {
                 array[m] = auxArray[m];
+            }
+        }
+
+        /// <summary>
+        /// Sorts an one-dimensional array using quick sort.
+        /// </summary>
+        /// <param name="array">The one-dimensional array to sort.</param>
+        public static void QuickSort(T[] array)
+        {
+            var n = array.Length;
+            QSort(array, 0, n - 1);
+        }
+
+        private static void QSort(T[] array, int left, int right)
+        {
+            if(left < right)
+            {
+                var pivot = Partition(array, left, right);
+                QSort(array, left, pivot);
+                QSort(array, pivot + 1, right);
+            }
+        }
+
+        private static int Partition(T[] array, int left, int right)
+        {
+            var i = left;
+            var j = right;
+            var pivot = array[left];
+            while(true)
+            {
+                while (array[i].CompareTo(pivot) < 0)
+                {
+                    i++;
+                }
+
+                while (array[j].CompareTo(pivot) > 0)
+                {
+                    j--;
+                }
+
+                if(i >= j)
+                {
+                    return j;
+                }
+
+                (array[i], array[j]) = (array[j], array[i]);
+                i++;
+                j--;
             }
         }
     }

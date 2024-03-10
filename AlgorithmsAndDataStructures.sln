@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{E0DB8AD4-BAC8-4F20-BAFA-A2D4B5D379F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{E0DB8AD4-BAC8-4F20-BAFA-A2D4B5D379F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsTests", "AlgorithmsTests\AlgorithmsTests.csproj", "{1427571F-131B-4BCC-8679-D9A0C73495E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmsTests", "AlgorithmsTests\AlgorithmsTests.csproj", "{1427571F-131B-4BCC-8679-D9A0C73495E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures", "DataStructures\DataStructures.csproj", "{9604AD47-73B1-4587-80F3-2D2574B5389E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresTests", "DataStructuresTests\DataStructuresTests.csproj", "{A753810F-38A0-493A-9950-0B81CEF9FC24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{1427571F-131B-4BCC-8679-D9A0C73495E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1427571F-131B-4BCC-8679-D9A0C73495E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1427571F-131B-4BCC-8679-D9A0C73495E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9604AD47-73B1-4587-80F3-2D2574B5389E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9604AD47-73B1-4587-80F3-2D2574B5389E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9604AD47-73B1-4587-80F3-2D2574B5389E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9604AD47-73B1-4587-80F3-2D2574B5389E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A753810F-38A0-493A-9950-0B81CEF9FC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A753810F-38A0-493A-9950-0B81CEF9FC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A753810F-38A0-493A-9950-0B81CEF9FC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A753810F-38A0-493A-9950-0B81CEF9FC24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

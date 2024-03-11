@@ -2,14 +2,14 @@
 {
     public class SinglyLinkedList<T>
     {
-        public Node<T>? Head { get; set; }
-        public Node<T>? Tail { get; set; } 
+        public SinlgyLinkedListNode<T>? Head { get; set; }
+        public SinlgyLinkedListNode<T>? Tail { get; set; } 
         public int Count { get; set; }
         private bool isEmpty => Count == 0;
 
         public void AddFirst(T value)
         {
-            var newNode = new Node<T>(value)
+            var newNode = new SinlgyLinkedListNode<T>(value)
             {
                 Next = Head
             };
@@ -25,7 +25,7 @@
 
         public void AddLast(T value)
         {
-            var newNode = new Node<T>(value);
+            var newNode = new SinlgyLinkedListNode<T>(value);
 
             if (isEmpty)
             {

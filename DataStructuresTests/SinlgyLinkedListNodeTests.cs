@@ -4,18 +4,18 @@ using Xunit.Abstractions;
 
 namespace DataStructuresTests
 {
-    public class NodeTests
+    public class SinlgyLinkedListNodeTests
     {
-        public NodeTests(ITestOutputHelper output) => this.output = output;
+        public SinlgyLinkedListNodeTests(ITestOutputHelper output) => this.output = output;
 
         private readonly ITestOutputHelper output;
     
         [Fact]
-        public void NodeTest_Int()
+        public void SinlgyLinkedListNodeTest_Int()
         {
             // Arrange
-            var firstNode = new Node<int>(5);
-            var secondNode = new Node<int>(6);
+            var firstNode = new SinlgyLinkedListNode<int>(5);
+            var secondNode = new SinlgyLinkedListNode<int>(6);
            
             // Act
             firstNode.Next = secondNode;
@@ -25,7 +25,7 @@ namespace DataStructuresTests
             Assert.Equal(6, firstNode.Next.Value);
         }
 
-        private void Print(Node<int> node)
+        private void Print(SinlgyLinkedListNode<int> node)
         {
             while (node != null)
             {

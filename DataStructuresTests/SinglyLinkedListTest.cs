@@ -83,7 +83,6 @@ namespace DataStructuresTests
             Assert.Equal(1, singlyLinkedList.Head!.Value);
         }
 
-
         [Fact]
         public void SinglyLinkedList_RemoveLast_Test_Exception()
         {

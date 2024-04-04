@@ -4,8 +4,8 @@
     {
         public SinlgyLinkedListNode<T>? Head { get; set; }
         public SinlgyLinkedListNode<T>? Tail { get; set; } 
-        public int Count { get; set; }
-        private bool isEmpty => Count == 0;
+        public int Count { get; private set; }
+        public bool IsEmpty => Count == 0;
 
         public void AddFirst(T value)
         {
@@ -27,7 +27,7 @@
         {
             var newNode = new SinlgyLinkedListNode<T>(value);
 
-            if (isEmpty)
+            if (IsEmpty)
             {
                 Head = newNode;
             }
@@ -42,7 +42,7 @@
 
         public void RemoveFirst()
         {
-            if(isEmpty)
+            if(IsEmpty)
             {
                 throw new InvalidOperationException("The operation is invalid.");
             }
@@ -59,7 +59,7 @@
 
         public void RemoveLast()
         {
-            if(isEmpty)
+            if(IsEmpty)
             {
                 throw new InvalidOperationException("The operation is invalid.");
             }

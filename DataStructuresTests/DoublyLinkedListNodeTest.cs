@@ -1,4 +1,4 @@
-﻿using DataStructures.Lists;
+﻿using DataStructures.LinkedList;
 using Xunit;
 
 namespace DataStructuresTests

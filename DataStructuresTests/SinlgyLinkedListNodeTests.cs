@@ -1,5 +1,5 @@
 ﻿using Xunit;
-using DataStructures.Lists;
+using DataStructures.LinkedList;
 using Xunit.Abstractions;
 
 namespace DataStructuresTests

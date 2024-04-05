@@ -2,7 +2,6 @@
 using Xunit;
 using Xunit.Abstractions;
 
-
 namespace DataStructuresTests
 {
     public class StackTests

@@ -7,7 +7,6 @@ namespace DataStructuresTests
     public class SinlgyLinkedListNodeTests
     {
         public SinlgyLinkedListNodeTests(ITestOutputHelper output) => this.output = output;
-
         private readonly ITestOutputHelper output;
     
         [Fact]

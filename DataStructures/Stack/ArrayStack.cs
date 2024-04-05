@@ -1,6 +1,8 @@
-﻿namespace DataStructures.Stack
+﻿using System.Collections;
+
+namespace DataStructures.Stack
 {
-    public class ArrayStack<T>
+    public class ArrayStack<T> : IEnumerable<T>
     {
         public int Count { get; private set; }
         public bool IsEmpty => Count == 0;
@@ -45,6 +47,19 @@
             }
 
             return stack[Count - 1];
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for(var i = Count - 1; i >= 0; i--)
+            {
+                yield return stack[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

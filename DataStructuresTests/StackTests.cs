@@ -1,12 +1,15 @@
-﻿using DataStructures.LinkedList;
-using DataStructures.Stack;
+﻿using DataStructures.Stack;
 using Xunit;
+using Xunit.Abstractions;
 
 
 namespace DataStructuresTests
 {
     public class StackTests
     {
+        public StackTests(ITestOutputHelper output) => this.output = output;
+        private readonly ITestOutputHelper output;
+
         [Fact]
         public void ArrayStack_IsEmpty_Test()
         {
@@ -57,10 +60,19 @@ namespace DataStructuresTests
             arrayStack.Push(2);
             arrayStack.Push(3);
             var item = arrayStack.Pop();
+            Print(arrayStack);
 
             // Assert
             Assert.Equal(2, arrayStack.Count);
             Assert.Equal(3, item);
+        }
+
+        private void Print(ArrayStack<int> stack)
+        {
+            foreach(var item in stack)
+            {
+                output.WriteLine(item.ToString());
+            }
         }
     }
 }

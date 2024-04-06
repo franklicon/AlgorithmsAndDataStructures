@@ -66,12 +66,72 @@ namespace DataStructuresTests
             Assert.Equal(3, item);
         }
 
-        private void Print(ArrayStack<int> stack)
+        [Fact]
+        public void LinkedListStack_IsEmpty_Test()
         {
-            foreach(var item in stack)
+            // Arrange
+            var linkedListStack = new LinkedListStack<int>();
+
+            // Assert
+            Assert.True(linkedListStack.IsEmpty);
+        }
+
+        [Fact]
+        public void LinkedListStack_Push_Test()
+        {
+            // Arrange
+            var linkedListStack = new LinkedListStack<int>();
+
+            // Act
+            linkedListStack.Push(1);
+
+            // Assert
+            Assert.False(linkedListStack.IsEmpty);
+            Assert.Equal(1, linkedListStack.Count);
+        }
+
+        [Fact]
+        public void LinkedListStack_Peek_Test()
+        {
+            // Arrange
+            var linkedListStack = new LinkedListStack<int>();
+
+            // Act
+            linkedListStack.Push(1);
+            var item = linkedListStack.Peek();
+
+            // Assert
+            Assert.False(linkedListStack.IsEmpty);
+            Assert.Equal(1, item);
+        }
+
+        [Fact]
+        public void LinkedListStack_Pop_Test()
+        {
+            // Arrange
+            var linkedListStack = new LinkedListStack<int>();
+
+            // Act
+            linkedListStack.Push(1);
+            linkedListStack.Push(2);
+            linkedListStack.Push(3);
+            var item = linkedListStack.Pop();
+            Print(linkedListStack);
+
+            // Assert
+            Assert.Equal(2, linkedListStack.Count);
+            Assert.Equal(3, item);
+        }
+
+        private void Print(dynamic stack)
+        {
+            if(stack is ArrayStack<int> || stack is LinkedListStack<int>)
             {
-                output.WriteLine(item.ToString());
-            }
+                foreach (var item in stack)
+                {
+                    output.WriteLine(item.ToString());
+                }
+            }       
         }
     }
 }
